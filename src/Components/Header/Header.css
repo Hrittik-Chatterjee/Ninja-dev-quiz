@@ -1,0 +1,15 @@
+.header{
+    background-color: #fa98d8;
+}
+
+.logoandname h1 {
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 22px;
+    margin-left: 10px;
+    color: slategrey;
+}
+.image{
+    height: 80px;
+    width: 80px;
+}
