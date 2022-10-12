@@ -1,13 +1,19 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { createContext } from 'react';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from '../Header/Header';
 
+export const TopicContext = createContext([])
+
 const Layout = () => {
+    const topics = useLoaderData()
+    // console.log(topics)
     return (
-        <div>
+        <TopicContext.Provider value={[topics]}>
+
             <Header></Header>
             <Outlet></Outlet>
-        </div>
+
+        </TopicContext.Provider>
     );
 };
 

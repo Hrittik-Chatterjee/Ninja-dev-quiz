@@ -16,6 +16,7 @@ function App() {
         path:'/',
         element:<Layout></Layout>,
         errorElement: <Error></Error> ,
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         children :[
           {
             path:'/',
