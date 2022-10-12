@@ -1,0 +1,17 @@
+.faq{
+    background-color: #FFCBED;
+}
+
+.divider{
+    color: #fa98d8;
+}
+
+h2{
+    color: slategrey;
+}
+p{
+    color: rgb(243, 128, 172);
+}
+summary {
+        color: slategray;
+}

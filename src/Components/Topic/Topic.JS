@@ -1,9 +1,10 @@
 import React from 'react';
 
 
+
 const Topic = ({topic}) => {
-      const {name,id,logo,total} = topic  
-         
+      const {name,logo,total} = topic  
+        
     return (
             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
                 <img src={logo} alt="" className="object-cover object-center w-full rounded-t-md h-65 dark:bg-gray-500" />

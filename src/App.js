@@ -9,6 +9,7 @@ import Faq from './Components/Faq/Faq';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Error from './Components/Error/Error';
+import Quiz from './Components/Quiz/Quiz';
 
 function App() {
   const router =createBrowserRouter([
@@ -28,7 +29,7 @@ function App() {
           },
           {
             path:'/about',
-            element:<About></About>
+            element:<Quiz></Quiz>
           },
           {
             path:'/statics',
