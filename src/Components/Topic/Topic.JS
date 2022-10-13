@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 
 const Topic = ({topic}) => {
-      const {name,logo,total} = topic  
+      const {name,logo,total,id} = topic  
         
     return (
             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -13,7 +15,7 @@ const Topic = ({topic}) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
                         <p className="dark:text-gray-100">Total Quizes: {total}</p>
                     </div>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Start Quiz</button>
+                    <button  type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link rel="noopener noreferrer" to={`/quizes/${id}`}>Start Quiz</Link></button>
                 </div>
             </div>
     

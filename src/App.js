@@ -2,7 +2,7 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import About from './Components/About/About';
+
 import Statics from './Components/Statics/Statics';
 import Faq from './Components/Faq/Faq';
 
@@ -10,6 +10,8 @@ import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Error from './Components/Error/Error';
 import Quiz from './Components/Quiz/Quiz';
+import Quizes from './Components/Quizes/Quizes';
+import About from './Components/About/About';
 
 function App() {
   const router =createBrowserRouter([
@@ -29,7 +31,7 @@ function App() {
           },
           {
             path:'/about',
-            element:<Quiz></Quiz>
+            element:<About></About>
           },
           {
             path:'/statics',
@@ -38,7 +40,13 @@ function App() {
           {
             path:'/faq',
             element:<Faq></Faq>
-          }
+          },
+          {
+            path:'/quizes/:id',
+            element:<Quizes></Quizes>,
+            loader: ({params})=>fetch (`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
+         
         ]
       }
       

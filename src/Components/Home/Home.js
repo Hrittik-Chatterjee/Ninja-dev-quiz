@@ -9,7 +9,7 @@ import './Home.css'
 const Home = () => {
     const topics = useContext(TopicContext)
     const data = topics[0].data
-    console.log(data)
+    
     return (
         <div>
         <div className='flex align-middle'>
