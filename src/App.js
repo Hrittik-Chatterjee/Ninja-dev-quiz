@@ -9,9 +9,7 @@ import Faq from './Components/Faq/Faq';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Error from './Components/Error/Error';
-import Quiz from './Components/Quiz/Quiz';
 import Quizes from './Components/Quizes/Quizes';
-import About from './Components/About/About';
 
 function App() {
   const router =createBrowserRouter([
