@@ -53,9 +53,13 @@ const Quizes = () => {
     for (let i = 0; i < selectedOptions.length; i++) {
 
       if (quizesData[currentQuestion].correctAnswer === selectedOptions[i].answerByUser) {
-        toast.success('correct answer', {
+        toast.success('Your answer is correct', {
           position: 'top-center',
           theme: 'colored'
+        })
+      }else{
+        toast.warning('Wrong answer',{
+          position: 'top-center'
         })
       }
 
@@ -106,9 +110,9 @@ const Quizes = () => {
               <div className="flex flex-col w-full">
                 {quizesData[currentQuestion].options.map((answer, index) => (
 
-                  <div onClick={diffToast}>
+                  <div  key={index} onClick={diffToast}>
                     <div
-                      key={index}
+                     
                       className="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer bg-white/5 border-white/10 rounded-xl"
                       onClick={(e) => handleAnswerOption(answer)}
 

@@ -143,7 +143,7 @@ const Header = () => {
                           title='Faq'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Faq
+                          Blog
                         </Link>
                       </li>
                     </ul>
