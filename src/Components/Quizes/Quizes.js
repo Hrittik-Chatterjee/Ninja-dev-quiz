@@ -75,12 +75,7 @@ const Quizes = () => {
   }
 
 
-  console.log(quizesData[currentQuestion].correctAnswer)
-  console.log(selectedOptions)
 
-
-
-  console.log(quizesData[1].correctAnswer)
   return (
 
     <div>

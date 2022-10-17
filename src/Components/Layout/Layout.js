@@ -6,7 +6,7 @@ export const TopicContext = createContext([])
 
 const Layout = () => {
     const topics = useLoaderData()
-    // console.log(topics)
+   
     return (
         <TopicContext.Provider value={[topics]}>
 

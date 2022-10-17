@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 const Statics = () => {
   const loaderData = useLoaderData()
   const dataOfChart = loaderData.data
-  console.log(loaderData.data)
+
   return (
     <div className="flex justify-center">
 
