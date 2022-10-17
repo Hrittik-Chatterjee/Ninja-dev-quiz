@@ -30,10 +30,6 @@ function App() {
             element:<Home></Home>
           },
           {
-            path:'/about',
-            element:<About></About>
-          },
-          {
             path:'/static',
             element:<Statics></Statics>,
             loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz')
