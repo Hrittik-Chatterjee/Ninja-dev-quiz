@@ -34,12 +34,14 @@ function App() {
             element:<About></About>
           },
           {
-            path:'/statics',
-            element:<Statics></Statics>
+            path:'/static',
+            element:<Statics></Statics>,
+            loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz')
           },
           {
             path:'/faq',
             element:<Faq></Faq>
+            
           },
           {
             path:'/quizes/:id',
