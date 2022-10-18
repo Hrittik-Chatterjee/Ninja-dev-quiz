@@ -16,6 +16,7 @@ const Quizes = () => {
   const handleAnswerOption = (answer) => {
     setSelectedOptions([
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
+      
     ]);
     setSelectedOptions([...selectedOptions]);
   };
@@ -36,8 +37,8 @@ const Quizes = () => {
     for (let i = 0; i < quizesData.length; i++) {
       quizesData[i].options.map(
         // eslint-disable-next-line no-loop-func
-        (answerr) =>
-          quizesData[currentQuestion].correctAnswer && answerr === selectedOptions[i].answerByUser &&
+        (answer) =>
+          quizesData[currentQuestion].correctAnswer && answer === selectedOptions[i].answerByUser &&
           (newScore++)
       );
     }
@@ -47,28 +48,32 @@ const Quizes = () => {
 
  
 
-  const diffToast = () => {
+  const diffToast = (answer) => {
+       
+  
 
 
-    for (let i = 0; i < selectedOptions.length; i++) {
 
-      if (quizesData[currentQuestion].correctAnswer === selectedOptions[i].answerByUser) {
+   
+
+      if (quizesData[currentQuestion].correctAnswer === answer) {
         toast.success('Your answer is correct', {
           position: 'top-center',
           theme: 'colored'
-        })
-      }else{
-        toast.warning('Wrong answer',{
+        })}
+      
+      else{
+        toast.warning('wrong answer' ,{
           position: 'top-center'
         })
       }
 
-    }
+  
 
   }
 
   const showCorrectAnswer = () => {
-    toast(quizesData[currentQuestion].correctAnswer, {
+    toast( quizesData[currentQuestion].correctAnswer, {
       position: 'top-center',
       theme: 'dark'
     })
@@ -105,7 +110,7 @@ const Quizes = () => {
               <div className="flex flex-col w-full">
                 {quizesData[currentQuestion].options.map((answer, index) => (
 
-                  <div  key={index} onClick={diffToast}>
+                  <div  key={index} onClick={(e) => diffToast(answer)}>
                     <div
                      
                       className="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer bg-white/5 border-white/10 rounded-xl"
