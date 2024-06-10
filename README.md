@@ -1,6 +1,6 @@
 # About Ninja Dev quiz project
 
-## Live Website Link :  https://subtle-taffy-e9f820.netlify.app/
+## Live Website Link :  [https://subtle-taffy-e9f820.netlify.app/](https://ninjadevquiz.netlify.app/)
 
 ### Details about Project :
 * This is a Programming related quiz website.
