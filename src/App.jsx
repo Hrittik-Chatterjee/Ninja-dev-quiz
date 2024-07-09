@@ -19,7 +19,7 @@ function App() {
       path: "/",
       element: <Layout></Layout>,
       errorElement: <Error></Error>,
-      loader: () => fetch("https://ninja-dev-quiz-server.vercel.app/quizes"),
+      loader: () => fetch("https://ninja-dev-quiz-server.onrender.com/quizes"),
       children: [
         {
           path: "/",
@@ -62,7 +62,7 @@ function App() {
           ),
           loader: ({ params }) =>
             fetch(
-              `https://ninja-dev-quiz-server.vercel.app/quizes/${params.id}`
+              `https://ninja-dev-quiz-server.onrender.com/${params.id}`
             ),
         },
       ],
