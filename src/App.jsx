@@ -62,7 +62,7 @@ function App() {
           ),
           loader: ({ params }) =>
             fetch(
-              `https://ninja-dev-quiz-server.onrender.com/${params.id}`
+              `https://ninja-dev-quiz-server.onrender.com/quizes/${params.id}`
             ),
         },
       ],
