@@ -1,12 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import siteImage from "../../Assets/5100_4_01.jpg";
 import { TopicContext } from "../Layout/Layout";
 import Topic from "../Topic/Topic";
+import { DotLoader } from "react-spinners";
 import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const topics = useContext(TopicContext);
-  const data = topics;
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (topics.length > 0) {
+      setData(topics);
+      setLoading(false);
+    }
+  }, [topics]);
 
   return (
     <div>
@@ -25,11 +34,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mx-12 my-20 grid md:grid-cols-4 sm:grid-cols-1 gap-4 content-center ...">
-        {data.map((topic) => (
-          <Topic topic={topic} key={topic._id}></Topic>
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center">
+          <DotLoader color="#C71585" />
+        </div>
+      ) : (
+        <div className="mx-12 my-20 grid md:grid-cols-4 sm:grid-cols-1 gap-4 content-center">
+          {data.map((topic) => (
+            <Topic topic={topic} key={uuidv4()} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
