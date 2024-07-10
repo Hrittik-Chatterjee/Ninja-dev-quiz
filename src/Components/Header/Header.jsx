@@ -192,6 +192,52 @@ const Header = () => {
                           Blog
                         </Link>
                       </li>
+                      {!user && (
+                        <>
+                          <li>
+                            <Link
+                              to="/signup"
+                              aria-label="SignUp"
+                              title="SignUp"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            >
+                              Sign Up
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="/login"
+                              aria-label="Login"
+                              title="Login"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            >
+                              Login
+                            </Link>
+                          </li>
+                        </>
+                      )}
+
+                      {user && (
+                        <>
+                          {" "}
+                          <li>
+                            <Link
+                              to="/profile"
+                              aria-label="Profile"
+                              title="Profile"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            >
+                              Profile
+                            </Link>
+                          </li>
+                          <button
+                            onClick={handleLogout}
+                            className="btn btn-sm  text-gray-700  font-medium lg:block"
+                          >
+                            Logout
+                          </button>
+                        </>
+                      )}
                     </ul>
                   </nav>
                 </div>
