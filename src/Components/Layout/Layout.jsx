@@ -12,10 +12,15 @@ const Layout = () => {
   const fetchedTopics = useLoaderData();
 
   useEffect(() => {
-    if (fetchedTopics && fetchedTopics.length > 0) {
-      setTopics(fetchedTopics);
-      setLoading(false);
-    }
+    // Delay rendering for 5 seconds
+    const delay = setTimeout(() => {
+      if (fetchedTopics && fetchedTopics.length > 0) {
+        setTopics(fetchedTopics);
+        setLoading(false);
+      }
+    }, 5000);
+
+    return () => clearTimeout(delay); // Clean up timeout on unmount
   }, [fetchedTopics]);
 
   if (loading) {
